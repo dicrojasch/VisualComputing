@@ -7,11 +7,10 @@
   }
   
   public void draw() {    
-    drawfork();
+    drawTriangle();
   }
   
-  public void drawfork(){
-
+public void drawTriangle(){
     float[] cornersX = new float[20];
     float[] cornersY = new float[20];
     float smallestSide = width*0.2;        

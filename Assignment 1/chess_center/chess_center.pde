@@ -1,10 +1,16 @@
  //<>//
 void setup() {
-    size (600,600);
+    size (800,600);
 
 }
 
 void draw() {
+    chessCenter();
+    
+}
+void chessCenter(){
+    
+    
     background(255);           
     float smallCircle = 20;
     float largestLine = sqrt(width*width+height*height);
@@ -18,10 +24,10 @@ void draw() {
       noFill();            
       chess+=1;
       for(float u = 0; u < 2*PI; u+=2*PI/lines){
-        line(width/2+cos(u)*before/2, height/2+sin(u)*before/2, width/2+cos(u)*i/2, width/2+sin(u)*i/2);
+        line(width/2+cos(u)*before/2, height/2+sin(u)*before/2, width/2+cos(u)*i/2, height/2+sin(u)*i/2);
         if(chess%2 == 0){
           for(float v = u; v < u+2*PI/lines; v+=2*PI/lines/200){
-           line(width/2+cos(v)*before/2, height/2+sin(v)*before/2, width/2+cos(v)*i/2, width/2+sin(v)*i/2);
+           line(width/2+cos(v)*before/2, height/2+sin(v)*before/2, width/2+cos(v)*i/2, height/2+sin(v)*i/2);
           }          
         }
         chess+=1;                
